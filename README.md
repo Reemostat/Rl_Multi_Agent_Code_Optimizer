@@ -8,8 +8,35 @@ RL Code Agent is an invite-only, production-grade platform that uses reinforceme
 * Execution-grounded evaluation with runtime and memory benchmarking
 * Security controls: JWT validation, rate limiting, and sandboxed execution
 
-## GETTING STARTED
 
+
+## PROJECT STRUCTURE
+
+```
+rl-code-agent/
+├── frontend/              # Next.js 15 frontend application
+│   ├── app/              # App Router pages and layouts
+│   ├── components/       # React components (charts, panels, etc.)
+│   └── lib/              # Utilities (API client, store, Supabase)
+├── backend/              # FastAPI backend server
+│   ├── agents/           # Specialized optimization agents
+│   ├── supabase/         # Database migrations
+│   └── main.py           # FastAPI application entry point
+├── rl/                   # Reinforcement learning components
+│   ├── env.py            # Custom Gymnasium environment
+│   ├── train.py          # PPO model training script
+│   ├── services/         # State encoding, dataset loading
+│   └── checkpoints/      # Trained PPO model files
+├── executor/             # Code execution sandbox
+│   └── sandbox.py        # Sandboxed code execution
+├── shared/               # Shared utilities
+│   ├── config.py         # Configuration constants
+│   ├── prompts.py        # LLM prompts for each strategy
+│   └── sanitize.py       # Code sanitization
+└── experiments/          # Training datasets
+    └── dataset/          # Python code samples for training
+```
+## GETTING STARTED
 ### Prerequisites
 
 Before you begin, ensure you have:
@@ -483,32 +510,7 @@ Frontend displays:
 8. **Request size validation**: Maximum 300 lines, 10KB per request
 9. **Structured logging**: All operations logged for audit trail
 
-## PROJECT STRUCTURE
 
-```
-rl-code-agent/
-├── frontend/              # Next.js 15 frontend application
-│   ├── app/              # App Router pages and layouts
-│   ├── components/       # React components (charts, panels, etc.)
-│   └── lib/              # Utilities (API client, store, Supabase)
-├── backend/              # FastAPI backend server
-│   ├── agents/           # Specialized optimization agents
-│   ├── supabase/         # Database migrations
-│   └── main.py           # FastAPI application entry point
-├── rl/                   # Reinforcement learning components
-│   ├── env.py            # Custom Gymnasium environment
-│   ├── train.py          # PPO model training script
-│   ├── services/         # State encoding, dataset loading
-│   └── checkpoints/      # Trained PPO model files
-├── executor/             # Code execution sandbox
-│   └── sandbox.py        # Sandboxed code execution
-├── shared/               # Shared utilities
-│   ├── config.py         # Configuration constants
-│   ├── prompts.py        # LLM prompts for each strategy
-│   └── sanitize.py       # Code sanitization
-└── experiments/          # Training datasets
-    └── dataset/          # Python code samples for training
-```
 
 ## KEY FEATURES
 
