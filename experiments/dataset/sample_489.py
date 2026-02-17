@@ -1,0 +1,12 @@
+"""
+Log processing 4
+"""
+def parse_logs_3(log_lines):
+    errors = []
+    warnings = []
+    for line in log_lines:
+        if "ERROR" in line:
+            errors.append(line)
+        elif "WARNING" in line:
+            warnings.append(line)
+    return errors, warnings

@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ..
+      dockerfile: docker/backend.Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_SERVICE_ROLE_KEY=${SUPABASE_SERVICE_ROLE_KEY}
+      - SUPABASE_JWT_SECRET=${SUPABASE_JWT_SECRET}
+      - ALLOWED_ORIGINS=http://localhost:3000
+    volumes:
+      - ../rl/checkpoints:/app/rl/checkpoints
+    restart: unless-stopped
+
+  # Optional: Sandbox service for isolated execution
+  # sandbox:
+  #   build:
+  #     context: ..
+  #     dockerfile: docker/sandbox.Dockerfile
+  #   restart: unless-stopped
+  #   read_only: true
+  #   tmpfs:
+  #     - /tmp
+

@@ -1,0 +1,94 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+.next/
+out/
+
+# Environment variables (CRITICAL - NEVER commit these!)
+.env
+.env.local
+.env*.local
+.env.development
+.env.production
+.env.test
+*.env
+backend/.env
+backend/.env.*
+frontend/.env.local
+frontend/.env
+frontend/.env.*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+.DS_Store?
+
+# RL checkpoints and logs
+rl/checkpoints/
+rl/logs/
+*.zip
+
+# Experiments
+experiments/results/
+experiments/__pycache__/
+
+# Docker
+*.log
+docker-compose.override.yml
+
+# Supabase
+.supabase/
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Secrets and keys (extra safety)
+*secret*
+*key*
+*.pem
+*.key
+*.cert
+secrets/
+.secrets/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.cache
+
