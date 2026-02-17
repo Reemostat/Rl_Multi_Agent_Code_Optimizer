@@ -92,3 +92,12 @@ secrets/
 *.bak
 *.cache
 
+# macOS system files
+.DS_Store
+
+# Python virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
