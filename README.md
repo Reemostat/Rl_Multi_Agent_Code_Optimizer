@@ -1,3 +1,13 @@
+## 🎬 Demo
+
+<p align="center">
+  <img src="assets/demo.gif" width="900"/>
+</p>
+
+<p align="center">
+  Reinforcement learning agent optimizing Python code in real time.
+</p>
+
 # RL Code Agent - Project Summary
 
 ## PROJECT OVERVIEW
